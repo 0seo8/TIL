@@ -10,15 +10,15 @@
 ## 팀장🐥
 ### 1. 팀장이 remote_repo를 생성한다.
 ### 2. 팀장이 본인의 로컬저장소에 클론을 해온다.
-	```shell
+```shell
     $ git clone { URL }
     $ cd { 파일명 }
     $ git branch //*main
-    ```
+```
 ### 3. git flow를 이용해 작업 시작 `$ git flow init`
 	- 대상 파일을 만들고 작업하는 경우 충돌이 자주 일어날 수 있기에 학습효과를 높일 수가 있다.
     
-	```shell
+```shell
     $ git flow init
     
     $ git branch // *develop  main
@@ -26,11 +26,11 @@
     $ git status // 확인
     $ git add fizzbuzz.py
     $ git commit -m "feat: Create fizzbuzz.py"
-    ```
+```
 ### 4. 작업한 내용을 원격저장소에 psuh
-	```shell
+```shell
     $ git push -u origin develop
-    ```
+```
 
 ### 5. 팀원에게 가져가라고 메세지를 보냄
 
