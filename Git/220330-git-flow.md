@@ -109,7 +109,7 @@ $ git push --tags  //특정한 설명을 추가하고 싶을 때
   ```shell
   //작성예시
   implement fizz, buzz 
-  >
+  
   Print fizz if i is times of 3
   Print buzz if i is times of 5
   otherwise, print i itself.
