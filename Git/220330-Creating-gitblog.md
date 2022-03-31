@@ -1,36 +1,34 @@
 # Git 블로그 만들기
 
->```shell
+```shell
 //github 레퍼지토리 생성 (★레퍼지토리 이름 {user.name}.github.io)
->
-//git clone {github_url}
->
+$ git clone {github_url}
 //hexo-cli설치
 $ npm install hexo-cli -g
 $ hexo init { 폴더명 }
 $ cd { 폴더명 }
 $ npm install
 $ hexo server
->
+
 //Writing 포스트 만들기
 $ hexo new post "My first post" ⭐
 $ vi source/_post/My-first-post.md
->
+
 //localhost:4000 
 $ hexo server
->
+
 //github 레퍼지토리와 연결 (_config.yml에서 수정)
 $ vi _config.yml
->
+
 	*Deployment* 수정
               type: git
               repo: { github의 url주소}
               branch: main
->
+
 //deploy : 자동으로 업데이트 될 수 있도록 설정
 $ npm install hexo-deployer-git --save
->
- >       
+
+       
 // clean & deploy (※ && 앞 명령을 하고 성공하면 뒤 명령을 해라)
 $ hexo clean && hexo deploy
 ```
