@@ -3,13 +3,13 @@
 ### 1. git clone의 방법
 - git허브에서 먼저 만들어서 작업하는 방법이 편하다.
 - clone은 remote로 원격 저장소 경로를 명시하지 않아도 된다.
->```shell
+```shell
 //github에서 repo를 생성 후(생성시 ADD a README file 체크)
 $ git clone {repo address}
 $ git add .
 $ git commit
 $ git push (origin main)
->```
+```
 
 **조금 더 자세한 정리**
 ```shell
