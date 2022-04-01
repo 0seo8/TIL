@@ -23,3 +23,11 @@ cosnt StarRating = (e) => {
 	e.target.closest('.a')
 }
 ```
+
+### data로 요소 찾기
+**El.getAttribute('data-max-rating')**
+
+```js
+starRating.getAttribute('data-max-rating')
+```
+
