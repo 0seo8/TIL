@@ -3,13 +3,13 @@
 ### 1. git clone의 방법
 - git허브에서 먼저 만들어서 작업하는 방법이 편하다.
 - clone은 remote로 원격 저장소 경로를 명시하지 않아도 된다.
->```shell
+```shell
 //github에서 repo를 생성 후(생성시 ADD a README file 체크)
 $ git clone {repo address}
 $ git add .
 $ git commit
 $ git push (origin main)
->```
+```
 
 **조금 더 자세한 정리**
 ```shell
@@ -32,28 +32,28 @@ $ git push
 $ mkdir second-repo
 $ cd second-repo
 $ git init
->
+
 // after creating remote repo on github,
 $ git remote add mask {repo_url} : repo_url과 프로젝트 폴더 이름 일치시키기
->
+
 $ git remote  // mask
 $ git remote -v // :fetch할 때 url, push할 때 url을 받을 수 있다.
->
->//파일작업
->$ touch README.md
+
+//파일작업
+$ touch README.md
 $ vi README.md
->
+
 $ git status // branch name이 master인 것을 확인할 수 있다.
->
->// After doing some work,
+
+// After doing some work,
 $ git add { filename }
 $ git commit
->
+
 // branch name 맞춰주기
 $ git branch -M main
 // 아직까지는 localrepo와 remoterepo가 완전 다른 녀석(선언만 해놓은 상태)
 $ git push -u mask main
-    //>branch 'main' set up to track 'mask/main'.
+    //branch 'main' set up to track 'mask/main'.
 ```
 
 ### 🐥 git init을 잘못한경우
