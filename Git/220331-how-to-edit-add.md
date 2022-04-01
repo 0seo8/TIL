@@ -47,7 +47,10 @@ $ git rebase -i HEAD~3 //1. 열린 창에서 수정하고 싶은 커밋 옆의 p
  $ git add -u    --> -u 옵션의 의미는 update tracked files
  $ > git commit -m "Message"
  $ > git push
- ```
+```
+
+
+
 
 ---
 참고자료
