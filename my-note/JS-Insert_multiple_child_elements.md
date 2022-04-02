@@ -1,37 +1,36 @@
-# 자식요소 여러개 삽입하기.
+# 동적으로 자식요소 여러개 삽입하기.
 
 ## Intro
 
-지난 번에 비슷한 구조의 코드를 작성해보았지만, 아직 익숙지가 않아 따로 포스팅을 해 정리를 해보았다.
+지난 번에 비슷한 구조의 코드를 작성해보았지만, 아직 익숙지가 않아 따로 포스팅을 해 정리를 해보려고 한다. 이번 기회에 작성하는데 어려움을 겪은 코드들을 모아 따로 정리하는 습관을 들여보려고 한다.😊
+
+## 요구 사항
+data-max-rating컨테이너 요소에 star요소로 구성된 star-rating 요소를 동적으로 생산한다. 생성되는 star요소의 숫자는 data-max-rating컨테이너 요소의 data 값을 참조한다.
 
 **html**
 ```
-...
 <div class="star-rating" data-max-rating="5"></div>
-(...)
 <div class="star-rating" data-max-rating="4"></div>
-(...)
 <div class="star-rating" data-max-rating="2"></div>
-(...)
-
 ```
-
-`data-max-rating`의 값만 `.star-rating`요소가 여러개 있다고 가정할 때, 이 `.star-rating`하부 요소에 `data-max-rating`의 값만큼의 `<i class="star"></i>`를 삽입하고자 할 때 코드를 어떻게 작성해야할까?
 
 **js**
 ```js
-const starRatng = document.querySelectorAll('.star-rating');
-const maxRating = starRating.getAttribute('data-max-rating');
+const $containers = [...document.querySelectorAll('.star-rating')];
 
-const newNode = document.createDocumentFragment();
-  
-for(let i = 0; i<maxRating; i++) {
+$containers.forEach( $container => {   
+  const maxRating = $container.getAttribute('data-max-rating')
+  const newNode = document.createDocumentFragment();
+
+  for (let i = 0; i < maxRating; i++) {
     const star = document.createElement('i')
-    star.classList.add('star')
+    star.classList.add('bx', 'bxs-star')
+    star.setAttribute('data-star', `${ i+1 }`)
     newNode.appendChild(star)
   }
-
-$container.appendChild(newNode)
+  
+  $container.appendChild(newNode)
+})
 ```
 
 ## 필요한 기본 배경
